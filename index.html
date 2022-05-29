@@ -13,7 +13,6 @@
       }
 
       body {
-        font: 100% / 1.5 Arial;
         height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
@@ -26,7 +25,7 @@
         padding: 0;
       }
 
-      /* Parallax base styles --------------------------------------------- */
+      /* Parallax base styles */
 
       section {
         position: relative;
@@ -62,19 +61,6 @@
         z-index: 2;
       }
 
-      /* Debugger styles - used to show the effect --------------------------------------------- */
-
-      .debug-on section {
-        transform: translate3d(700px, 0, -800px) rotateY(30deg);
-      }
-      .debug-on section > div {
-        box-shadow: 0 0 0 2px #000;
-        opacity: 0.9;
-      }
-      section {
-        transition: transform 0.5s;
-      }
-
       /* centre the content in the parallax layers */
       .centered {
         text-align: center;
@@ -84,7 +70,7 @@
         transform: translate(-50%, -50%);
       }
 
-      /* style the groups --------------------------------------------- */
+      /* style the groups */
 
       #group1 {
         z-index: 5; /* slide over group 2 */
