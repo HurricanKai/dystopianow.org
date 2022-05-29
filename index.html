@@ -6,19 +6,31 @@
     <title>Dystopia Now</title>
     <style>
       /* Big Thanks to https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ */
-      /* Parallax base styles --------------------------------------------- */
-      .parallax {
-        height: 500px; /* fallback for older browsers */
+
+      body,
+      html {
+        overflow: hidden;
+      }
+
+      body {
+        font: 100% / 1.5 Arial;
         height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-perspective: 300px;
         perspective: 300px;
+        font-size: 200%;
       }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Parallax base styles --------------------------------------------- */
 
       .parallax__group {
         position: relative;
-        height: 500px; /* fallback for older browsers */
         height: 100vh;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
@@ -58,16 +70,6 @@
 
       /* Debugger styles - used to show the effect --------------------------------------------- */
 
-      .debug {
-        position: fixed;
-        top: 0;
-        left: 0.5em;
-        z-index: 999;
-        background: rgba(0, 0, 0, 0.85);
-        color: #fff;
-        padding: 0.5em;
-        border-radius: 0 0 5px 5px;
-      }
       .debug-on .parallax__group {
         -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
         transform: translate3d(700px, 0, -800px) rotateY(30deg);
@@ -79,26 +81,6 @@
       .parallax__group {
         -webkit-transition: -webkit-transform 0.5s;
         transition: transform 0.5s;
-      }
-
-      /* demo styles --------------------------------------------- */
-
-      body,
-      html {
-        overflow: hidden;
-      }
-
-      body {
-        font: 100% / 1.5 Arial;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      .parallax {
-        font-size: 200%;
       }
 
       /* centre the content in the parallax layers */
@@ -161,73 +143,60 @@
       #group7 .parallax__layer--base {
         background: rgb(255, 241, 100);
       }
-
-      /* misc --------------------------------------------- */
-      .demo__info {
-        position: absolute;
-        z-index: 100;
-        bottom: 1vh;
-        top: auto;
-        font-size: 80%;
-        text-align: center;
-        width: 100%;
-      }
     </style>
   </head>
   <body>
-    <div class="parallax">
-      <div id="group1" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
       </div>
-      <div id="group2" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--back">
-          <div class="title">Background Layer</div>
-        </div>
+    </div>
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
       </div>
-      <div id="group3" class="parallax__group">
-        <div class="parallax__layer parallax__layer--fore">
-          <div class="title">Foreground Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
       </div>
-      <div id="group4" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--back">
-          <div class="title">Background Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--deep">
-          <div class="title">Deep Background Layer</div>
-        </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title">Foreground Layer</div>
       </div>
-      <div id="group5" class="parallax__group">
-        <div class="parallax__layer parallax__layer--fore">
-          <div class="title">Foreground Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
       </div>
-      <div id="group6" class="parallax__group">
-        <div class="parallax__layer parallax__layer--back">
-          <div class="title">Background Layer</div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
+    </div>
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
       </div>
-      <div id="group7" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div class="title">Base Layer</div>
-        </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="title">Deep Background Layer</div>
+      </div>
+    </div>
+    <div id="group5" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title">Foreground Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
       </div>
     </div>
   </body>
