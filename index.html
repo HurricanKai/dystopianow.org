@@ -13,6 +13,7 @@
       }
 
       body {
+        font: 100% / 1.5 Arial;
         height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
@@ -24,8 +25,6 @@
         margin: 0;
         padding: 0;
       }
-
-      /* Parallax base styles */
 
       section {
         position: relative;
@@ -61,7 +60,6 @@
         z-index: 2;
       }
 
-      /* centre the content in the parallax layers */
       .centered {
         text-align: center;
         position: absolute;
@@ -70,110 +68,134 @@
         transform: translate(-50%, -50%);
       }
 
-      /* style the groups */
-
-      #group1 {
-        z-index: 5; /* slide over group 2 */
-      }
-      #group1 > .base {
-        background: rgb(102, 204, 102);
+      #start-group {
+        z-index: 5;
       }
 
-      #group2 {
-        z-index: 3; /* slide under groups 1 and 3 */
-      }
-      #group2 > .back {
-        background: rgb(123, 210, 102);
+      #start-group > .base {
+        background-color: lightgrey;
       }
 
-      #group3 {
-        z-index: 4; /* slide over group 2 and 4 */
-      }
-      #group3 > .base {
-        background: rgb(153, 216, 101);
+      #language-selection-group {
+        z-index: 6;
       }
 
-      #group4 {
-        z-index: 2; /* slide under group 3 and 5 */
-      }
-      #group4 > .deep {
-        background: rgb(184, 223, 101);
-      }
-
-      #group5 {
-        z-index: 3; /* slide over group 4 and 6 */
-      }
-      #group5 > .base {
-        background: rgb(214, 229, 100);
+      #language-selection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
       }
 
-      #group6 {
-        z-index: 2; /* slide under group 5 and 7 */
-      }
-      #group6 > .back {
-        background: rgb(245, 235, 100);
+      .button-checkbox {
+        width: 60%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        box-shadow: 8px 8px 0px black;
+        white-space: nowrap;
+        user-select: none;
+        text-align: center;
       }
 
-      #group7 {
-        z-index: 3; /* slide over group 7 */
+      .button-checkbox > input {
+        visibility: hidden;
       }
-      #group7 > .base {
-        background: rgb(255, 241, 100);
+
+      #niger-group-start > section {
+        z-index: 7;
+      }
+
+      #malawi-group-start > section {
+        z-index: 7;
+      }
+
+      #usbekistan-group-start > section {
+        z-index: 7;
+      }
+
+      #niger-group-start > .deep {
+        background-color: lightblue;
+      }
+
+      #end > .base {
+        background-color: black;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <section id="group1">
+    <section id="start-group">
       <div class="base">
-        <div class="centered">Base Layer</div>
+        <div class="centered"><h4>Beginne zu Scrollen</h4></div>
       </div>
     </section>
-    <section id="group2">
+    <section id="language-selection-group">
       <div class="base">
-        <div class="centered">Base Layer</div>
+        <div id="language-selection">
+          <label for="niger" class="button-checkbox">
+            <input type="checkbox" id="niger" />Niger, Westafrika </label
+          ><br />
+          <label for="malawi" class="button-checkbox">
+            <input type="checkbox" id="malawi" />Malawi, Ostafrika</label
+          ><br />
+          <label for="usbekistan" class="button-checkbox">
+            <input type="checkbox" id="usbekistan" />Usbekistan,
+            Zentralasien</label
+          >
+        </div>
+      </div>
+      <div class="back"></div>
+    </section>
+    <section id="niger-group-start">
+      <div class="base">
+        <div class="centered"><h1>Niger</h1></div>
       </div>
       <div class="back">
-        <div class="centered">Background Layer</div>
+        <div class="centered">
+          <br /><br />
+          <h2>Westafrika</h2>
+        </div>
       </div>
+      <div class="deep"></div>
     </section>
-    <section id="group3">
-      <div class="foreground">
-        <div class="centered">Foreground Layer</div>
-      </div>
+    <section id="malawi-group-start">
       <div class="base">
-        <div class="centered">Base Layer</div>
-      </div>
-    </section>
-    <section id="group4">
-      <div class="base">
-        <div class="centered">Base Layer</div>
+        <div class="centered"><h1>Malawi</h1></div>
       </div>
       <div class="back">
-        <div class="centered">Background Layer</div>
+        <div class="centered">
+          <br /><br />
+          <h2>Ostafrika</h2>
+        </div>
       </div>
       <div class="deep">
-        <div class="centered">Deep Background Layer</div>
+        <div class="centered"></div>
       </div>
     </section>
-    <section id="group5">
-      <div class="foreground">
-        <div class="centered">Foreground Layer</div>
-      </div>
+    <section id="usbekistan-group-start">
       <div class="base">
-        <div class="centered">Base Layer</div>
+        <div class="centered"><h1>Usbekistan</h1></div>
       </div>
-    </section>
-    <section id="group6">
       <div class="back">
-        <div class="centered">Background Layer</div>
+        <div class="centered">
+          <br /><br />
+          <h2>Zentralasien</h2>
+        </div>
       </div>
-      <div class="base">
-        <div class="centered">Base Layer</div>
+      <div class="deep">
+        <div class="centered"></div>
       </div>
     </section>
-    <section id="group7">
+    <section id="pre-end"></section>
+    <section id="end">
       <div class="base">
-        <div class="centered">Base Layer</div>
+        <div class="centered">Das Ende</div>
       </div>
     </section>
   </body>
