@@ -29,7 +29,7 @@
 
       /* Parallax base styles --------------------------------------------- */
 
-      .parallax__group {
+      section {
         position: relative;
         height: 100vh;
         -webkit-transform-style: preserve-3d;
@@ -70,7 +70,7 @@
 
       /* Debugger styles - used to show the effect --------------------------------------------- */
 
-      .debug-on .parallax__group {
+      .debug-on section {
         -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
         transform: translate3d(700px, 0, -800px) rotateY(30deg);
       }
@@ -78,7 +78,7 @@
         box-shadow: 0 0 0 2px #000;
         opacity: 0.9;
       }
-      .parallax__group {
+      section {
         -webkit-transition: -webkit-transform 0.5s;
         transition: transform 0.5s;
       }
@@ -146,28 +146,28 @@
     </style>
   </head>
   <body>
-    <div id="group1" class="parallax__group">
+    <section id="group1">
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
-    </div>
-    <div id="group2" class="parallax__group">
+    </section>
+    <section id="group2">
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="title">Background Layer</div>
       </div>
-    </div>
-    <div id="group3" class="parallax__group">
+    </section>
+    <section id="group3">
       <div class="parallax__layer parallax__layer--fore">
         <div class="title">Foreground Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
-    </div>
-    <div id="group4" class="parallax__group">
+    </section>
+    <section id="group4">
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
@@ -177,27 +177,27 @@
       <div class="parallax__layer parallax__layer--deep">
         <div class="title">Deep Background Layer</div>
       </div>
-    </div>
-    <div id="group5" class="parallax__group">
+    </section>
+    <section id="group5">
       <div class="parallax__layer parallax__layer--fore">
         <div class="title">Foreground Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
-    </div>
-    <div id="group6" class="parallax__group">
+    </section>
+    <section id="group6">
       <div class="parallax__layer parallax__layer--back">
         <div class="title">Background Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
-    </div>
-    <div id="group7" class="parallax__group">
+    </section>
+    <section id="group7">
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
