@@ -103,7 +103,33 @@
         text-align: center;
       }
 
-      .button-checkbox > input {
+      input:checked + .accent1.button-checkbox {
+        background-color: darkorange;
+      }
+
+      .button-checkbox:hover.accent1 {
+        background-color: darkorange;
+      }
+
+      input:checked + .accent2.button-checkbox {
+        background-color: skyblue;
+      }
+
+      .button-checkbox:hover.accent2 {
+        background-color: skyblue;
+      }
+
+      input:checked + .accent3.button-checkbox {
+        background-color: lawngreen;
+      }
+
+      .button-checkbox:hover.accent3 {
+        background-color: lawngreen;
+      }
+
+      /* I'd love to do .button-checkbox > input here,
+      but that's not an option due to us using that "+" based order dependent hack*/
+      input[type="radio"] {
         visibility: hidden;
       }
 
@@ -169,6 +195,14 @@
             .getElementById("usbekistan-group-start")
             .setAttribute("style", "visibility: hidden; height: 0;");
         }
+
+        if (niger || malawi || usbekistan) {
+          document.getElementById("end").setAttribute("style", "");
+        } else {
+          document
+            .getElementById("end")
+            .setAttribute("style", "visibility: hidden; height: 0;");
+        }
       };
 
       const init = () => {
@@ -210,15 +244,24 @@
     <section id="language-selection-group">
       <div class="base">
         <div id="language-selection">
-          <label for="niger" class="button-checkbox">
-            <input type="checkbox" id="niger" />Niger, Westafrika </label
+          <!-- the :has css selector is not widely supported & using + and this order-dependent setup works... -->
+          <input type="radio" name="country" value="niger" id="niger" />
+          <label for="niger" class="button-checkbox accent1"
+            >Niger, Westafrika
+          </label>
+          <br />
+          <input type="radio" name="country" value="malawi" id="malawi" />
+          <label for="malawi" class="button-checkbox accent2">
+            Malawi, Ostafrika</label
           ><br />
-          <label for="malawi" class="button-checkbox">
-            <input type="checkbox" id="malawi" />Malawi, Ostafrika</label
-          ><br />
-          <label for="usbekistan" class="button-checkbox">
-            <input type="checkbox" id="usbekistan" />Usbekistan,
-            Zentralasien</label
+          <input
+            type="radio"
+            name="country"
+            value="usbekistan"
+            id="usbekistan"
+          />
+          <label for="usbekistan" class="button-checkbox accent3">
+            Usbekistan, Zentralasien</label
           >
         </div>
       </div>
@@ -264,7 +307,6 @@
         <div class="centered"></div>
       </div>
     </section>
-    <section id="pre-end"></section>
     <section id="end">
       <div class="base">
         <div class="centered">Das Ende</div>
