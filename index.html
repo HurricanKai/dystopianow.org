@@ -101,6 +101,14 @@
         box-shadow: 8px 8px 0px black;
       }
 
+      .brut-box-invert {
+        padding: 3%;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        box-shadow: 8px 8px 0px white;
+      }
+
       input:checked + .accent1.button-checkbox {
         background-color: darkorange;
       }
@@ -129,6 +137,11 @@
       but that's not an option due to us using that "+" based order dependent hack*/
       input[type="radio"] {
         visibility: hidden;
+      }
+
+      #end {
+        height: 500vh;
+        z-index: 1;
       }
 
       #end > .base {
@@ -189,8 +202,20 @@
         color: white;
       }
 
+      .text-lightgrey {
+        color: lightgrey;
+      }
+
       .text-red {
         color: red;
+      }
+
+      .flex-end {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
       }
 
       section .spacing {
@@ -366,10 +391,17 @@
         </div>
       </div>
     </section>
-    <section class="spacing"></section>
     <section id="end">
-      <div class="base">
-        <div class="centered">Das Ende</div>
+      <div class="base four-grid">
+        <div class="tl flex-end">
+          <h2 class="brut-box-invert">Das Ende</h2>
+        </div>
+        <div class="br flex-end">
+          <h6 class="text-lightgrey">
+            Made by Kai Jellinghaus
+            <a href="https://github.com/HurricanKai">@HurricanKai</a>
+          </h6>
+        </div>
       </div>
     </section>
   </body>
