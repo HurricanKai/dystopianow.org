@@ -174,7 +174,7 @@
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-areas: "tr . tl" ". . ." "br . bl";
+        grid-template-areas: "tl . tr" ". . ." "bl . br";
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
       }
@@ -248,6 +248,18 @@
 
       #africa {
         z-index: 6;
+      }
+
+      #leid {
+        z-index: 8;
+      }
+
+      #ueberwachung {
+        z-index: 7;
+      }
+
+      #ueberwachung2 {
+        z-index: 8;
       }
     </style>
   </head>
@@ -335,26 +347,27 @@
       <div class="foreground four-grid">
         <div class="img-wrapper br">
           <div class="img-wrapper-start"></div>
-          <img src="/floating-slum.jpg" alt="" />
+          <img
+            src="/floating-slum.jpg"
+            alt="Bild von Slums auf dem Wasser von Oben"
+          />
           <div class="img-wrapper-end"></div>
         </div>
       </div>
       <div class="back">
         <div class="img-wrapper">
           <div class="img-wrapper-start"></div>
-          <img src="/children-slums.jpg" alt="" />
+          <img src="/children-slums.jpg" alt="Kinder im Slum" />
           <div class="img-wrapper-end"></div>
         </div>
       </div>
     </section>
     <section class="spacing"></section>
-    <section id="worse">
+    <section id="leid">
       <div class="base four-grid">
         <div class="tr brut-box">
           <h4>Warum muss es noch schlimmer werden?</h4>
         </div>
-      </div>
-      <div class="foreground four-grid">
         <div class="bl brut-box">
           <h3>Muss das Leid erst zu uns kommen?</h3>
         </div>
@@ -362,7 +375,57 @@
       <div class="back">
         <div class="img-wrapper">
           <div class="img-wrapper-start"></div>
-          <img src="/lagos-clear.jpeg" alt="" />
+          <img
+            src="/lagos-clear.jpeg"
+            alt="Menschen die Plastikstuehle von einem Schuthaufen wegtragen"
+          />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section class="spacing"></section>
+    <section id="ueberwachung">
+      <div class="base four-grid">
+        <div class="tl brut-box">
+          <h4>Blauer Himmel & &#252;berwachung</h4>
+        </div>
+        <div class="bl brut-box">
+          <img
+            src="/blauer-himmel.jpg"
+            alt="Viele Kameras auf einer Stange vor Blauem Himmel"
+          />
+        </div>
+      </div>
+      <div class="back four-grid">
+        <div class="br brut-box">
+          <img
+            src="/winnie-the-pooh-ban-china.webp"
+            alt="Pu der Bär im Gefaehnis"
+          />
+        </div>
+      </div>
+      <div class="deep">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/china-scan.jpg" alt="Person die gescannt wird" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section class="spacing"></section>
+    <section id="ueberwachung2">
+      <div class="foreground">
+        <div class="brut-box centered">Wer schaut dir gerade zu?</div>
+      </div>
+      <div class="base four-grid">
+        <div class="tl">
+          <img style="width: 30%" src="google.png" alt="google logo" />
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/ueberwachung-deutschland.jpg" alt="" />
           <div class="img-wrapper-end"></div>
         </div>
       </div>
