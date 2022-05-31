@@ -99,6 +99,8 @@
         color: black;
         border: 2px solid black;
         box-shadow: 8px 8px 0px black;
+        text-align: center;
+        align-self: center;
       }
 
       .brut-box-invert {
@@ -169,8 +171,12 @@
       }
 
       .four-grid {
+        width: 100%;
+        height: 100%;
         display: grid;
-        grid-template-areas: "tr tl" "br bl";
+        grid-template-areas: "tr . tl" ". . ." "br . bl";
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       .tr {
@@ -218,8 +224,9 @@
         justify-content: flex-end;
       }
 
-      section .spacing {
+      .spacing {
         z-index: 1;
+        background-color: white;
       }
 
       #atom {
@@ -230,8 +237,17 @@
         z-index: 3;
       }
 
-      #miast {
+      #ai {
         z-index: 4;
+        height: 200vh;
+      }
+
+      #miast {
+        z-index: 5;
+      }
+
+      #africa {
+        z-index: 6;
       }
     </style>
     <script>
@@ -366,8 +382,6 @@
       </div>
     </section>
     <section class="spacing"></section>
-    <section class="spacing"></section>
-    <section class="spacing"></section>
     <section id="miast">
       <div class="base">
         <div class="centered brut-box">
@@ -375,8 +389,8 @@
         </div>
       </div>
       <div class="back four-grid">
-        <div class="bl flex-vert-center text-white">
-          <h3 class="quote">Wyjście ludzi z miast</h3>
+        <div class="bl flex-vert-center brut-box">
+          <h3 class="brut-box-invert">Wyjście ludzi z miast</h3>
           <br />
           <h4>Menschen verlassen die Städte</h4>
           <br />
@@ -391,6 +405,49 @@
         </div>
       </div>
     </section>
+    <section class="spacing"></section>
+    <section id="africa">
+      <div class="base">
+        <div class="centered brut-box">
+          <h1>Afrika, Nigeria</h1>
+        </div>
+      </div>
+      <div class="foreground four-grid">
+        <div class="img-wrapper br">
+          <div class="img-wrapper-start"></div>
+          <img src="/floating-slum.jpg" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/children-slums.jpg" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section class="spacing"></section>
+    <section id="worse">
+      <div class="base four-grid">
+        <div class="tr brut-box">
+          <h4>Warum muss es noch schlimmer werden?</h4>
+        </div>
+      </div>
+      <div class="foreground four-grid">
+        <div class="bl brut-box">
+          <h3>Muss das Leid erst zu uns kommen?</h3>
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/lagos-clear.jpeg" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section class="spacing"></section>
     <section id="end">
       <div class="base four-grid">
         <div class="tl flex-end">
