@@ -80,16 +80,6 @@
         z-index: 6;
       }
 
-      #language-selection {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-      }
-
       .button-checkbox {
         width: 60%;
         padding-top: 3%;
@@ -133,25 +123,66 @@
         visibility: hidden;
       }
 
-      #niger-group-start > section {
-        z-index: 7;
-      }
-
-      #malawi-group-start > section {
-        z-index: 7;
-      }
-
-      #usbekistan-group-start > section {
-        z-index: 7;
-      }
-
-      #niger-group-start > .deep {
-        background-color: lightblue;
-      }
-
       #end > .base {
         background-color: black;
         color: white;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .img-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }
+      .img-wrapper-start {
+        flex-grow: 0.5;
+        background-color: lightgrey;
+      }
+      .img-wrapper-end {
+        flex-grow: 0.5;
+        background-color: lightgrey;
+      }
+
+      .four-grid {
+        display: grid;
+        grid-template-areas: "tr tl" "br bl";
+      }
+
+      .tr {
+        grid-area: tr;
+      }
+
+      .tl {
+        grid-area: tl;
+      }
+
+      .br {
+        grid-area: br;
+      }
+
+      .bl {
+        grid-area: bl;
+      }
+
+      .flex-vert-center {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text-white {
+        color: white;
+      }
+
+      .text-red {
+        color: red;
       }
     </style>
     <script>
@@ -241,70 +272,69 @@
         <div class="centered"><h4>Beginne zu Scrollen</h4></div>
       </div>
     </section>
-    <section id="language-selection-group">
+    <section id="atom">
       <div class="base">
-        <div id="language-selection">
-          <!-- the :has css selector is not widely supported & using + and this order-dependent setup works... -->
-          <input type="radio" name="country" value="niger" id="niger" />
-          <label for="niger" class="button-checkbox accent1"
-            >Niger, Westafrika
-          </label>
+        <div class="centered">
+          <h4>Für eine Dystopie braucht es kein Atomkrieg,</h4>
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/nuclear-war.jpg" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section id="auserdisch">
+      <div class="base">
+        <div class="centered">
+          <h4>oder Außerirdischen Einfluss,</h4>
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/comet-hitting-earth.webp" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section id="ai">
+      <div class="base">
+        <div class="centered">
+          <h4>und auch keine KI die uns alle Versklavt.</h4>
+        </div>
+      </div>
+      <div class="back">
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/ai-face.jpg" alt="" />
+          <div class="img-wrapper-end"></div>
+        </div>
+      </div>
+    </section>
+    <section id="miast">
+      <div class="base">
+        <div class="centered">
+          <h4 class="text-red">Dystopia Now</h4>
+        </div>
+      </div>
+      <div class="back four-grid">
+        <div class="bl flex-vert-center text-white">
+          <h3 class="quote">Wyjście ludzi z miast</h3>
           <br />
-          <input type="radio" name="country" value="malawi" id="malawi" />
-          <label for="malawi" class="button-checkbox accent2">
-            Malawi, Ostafrika</label
-          ><br />
-          <input
-            type="radio"
-            name="country"
-            value="usbekistan"
-            id="usbekistan"
-          />
-          <label for="usbekistan" class="button-checkbox accent3">
-            Usbekistan, Zentralasien</label
-          >
-        </div>
-      </div>
-      <div class="back"></div>
-    </section>
-    <section id="niger-group-start">
-      <div class="base">
-        <div class="centered"><h1>Niger</h1></div>
-      </div>
-      <div class="back">
-        <div class="centered">
-          <br /><br />
-          <h2>Westafrika</h2>
-        </div>
-      </div>
-      <div class="deep"></div>
-    </section>
-    <section id="malawi-group-start">
-      <div class="base">
-        <div class="centered"><h1>Malawi</h1></div>
-      </div>
-      <div class="back">
-        <div class="centered">
-          <br /><br />
-          <h2>Ostafrika</h2>
+          <h4>Menschen verlassen die Städte</h4>
+          <br />
+          <h6>Vision von Zbigniew Libera</h6>
         </div>
       </div>
       <div class="deep">
-        <div class="centered"></div>
-      </div>
-    </section>
-    <section id="usbekistan-group-start">
-      <div class="base">
-        <div class="centered"><h1>Usbekistan</h1></div>
-      </div>
-      <div class="back">
-        <div class="centered">
-          <br /><br />
-          <h2>Zentralasien</h2>
+        <div class="img-wrapper">
+          <div class="img-wrapper-start"></div>
+          <img src="/Wyjście ludzi z miast.jpg" alt="" />
+          <div class="img-wrapper-end"></div>
         </div>
-      </div>
-      <div class="deep">
-        <div class="centered"></div>
       </div>
     </section>
     <section id="end">
